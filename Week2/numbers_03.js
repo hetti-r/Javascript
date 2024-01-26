@@ -12,3 +12,12 @@
 
 let num1 = 0.4;
 let num2 = 9.3;
+
+function maxNum(roundedNum1, roundedNum2) {
+  return Math.round(num1, num2);
+}
+
+sqrtNum1 = roundedNum1 * roundedNum1;
+sqrtNum2 = roundedNum2 * roundedNum2;
+
+maxNum = 
