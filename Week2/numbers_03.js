@@ -13,11 +13,19 @@
 let num1 = 0.4;
 let num2 = 9.3;
 
-function maxNum(roundedNum1, roundedNum2) {
-  return Math.round(num1, num2);
-}
+let roundedNum1 = Math.round(num1, 1);
 
-sqrtNum1 = roundedNum1 * roundedNum1;
-sqrtNum2 = roundedNum2 * roundedNum2;
+let roundedNum2 = Math.round(num2, 1);
 
-maxNum = 
+let sqrtNum1 = num1 * num1;
+
+let sqrtNum2 = num2 * num2;
+
+let maxNum = Math.max(sqrtNum1, sqrtNum2);
+
+console.log(
+  typeof roundedNum1,
+  typeof roundedNum2,
+  typeof sqrtNum1,
+  typeof maxNum
+);

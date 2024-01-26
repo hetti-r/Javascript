@@ -6,7 +6,6 @@
 console.log(fahrenheitToCelsius(21)); // "-6,1"
 
 function fahrenheitToCelsius(Fahrenheit) {
-  return (Fahrenheit - 32) / 1.8;
+  let answer = ((Fahrenheit - 32) * 5) / 9;
+  return answer.toFixed(1);
 }
-
-let Fahrenheit = 6;
