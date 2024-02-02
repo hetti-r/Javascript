@@ -6,7 +6,13 @@ Develop a function called greaterNum which:
 
  */
 
-function greaterNum(a, b) {}
+function greaterNum(a, b) {
+  if (a < b) {
+    return b;
+  } else {
+    return a;
+  }
+}
 
 // Sample usage - do not modify
 console.log(greaterNum(5, 10));

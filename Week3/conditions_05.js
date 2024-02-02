@@ -3,7 +3,7 @@ Complete the function evenOrOdd such that it returns the string "even" when the 
  */
 
 function evenOrOdd(number) {
-  if (number % 2 == 0) {
+  if (number % 2 === 0) {
     return console.log("even");
   } else {
     return console.log("odd");

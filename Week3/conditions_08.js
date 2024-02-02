@@ -6,9 +6,15 @@ Returns a string combining the number and the appropriately pluralized form of t
 
  */
 
-function pluralize(pet, amount) 
-  
-  // Sample usage - do not modify
-  console.log('I have ' + pluralize('mouse', 0));
-  console.log('I have ' + pluralize('dog', 1));
-  console.log('I have ' + pluralize('parrot', 7));
+function pluralize(pet, amount) {
+  if (amount > 1) {
+    return pet + "s";
+  } else {
+    return pet;
+  }
+}
+
+// Sample usage - do not modify
+console.log("I have " + pluralize("mouse", 0));
+console.log("I have " + pluralize("dog", 1));
+console.log("I have " + pluralize("parrot", 7));
