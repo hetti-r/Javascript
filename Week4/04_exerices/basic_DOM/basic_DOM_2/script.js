@@ -14,10 +14,14 @@ let fruitList = document.querySelector("#fruitList");
 let fruitInput = document.querySelector("#fruitInput");
 
 const addFruit = () => {
-  let newElement = document.createElement("li");
-  newElement.textContent = fruitInput.value;
-  fruitList.appendChild(newElement);
-  fruitInput.value = "";
+  if (fruitInput) {
+    let newElement = document.createElement("li");
+    newElement.textContent = fruitInput.value.trim();
+    fruitList.appendChild(newElement);
+    fruitInput.value = "";
+  } else {
+    alert("Enter Fruit");
+  }
 };
 
 const button = document.querySelector("#addFruitBtn");
