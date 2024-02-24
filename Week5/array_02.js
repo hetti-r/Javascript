@@ -88,6 +88,9 @@ Expected outcomes:
 "Letters in 'Couch': C, o, u, c, h"
 */
 // Write your code here
+furniture.forEach((item) => {
+  console.log(`Letters in "${item}":`, item.split("").join(", "));
+});
 
 // Exerice 7: Filter positive temperatures
 let temperatures = [-5, 3, -1, 22, -40, 5, 18];
@@ -96,7 +99,11 @@ Write the function getPositiveTemperatures such that it returns an array contain
 Expected outcome: [3, 22, 5, 18]
 */
 // Write your code here
-
+const getPositiveTemperatures = () => {
+  const positiveTemp = temperatures.filter((temperature) => temperature > 0);
+  console.log(positiveTemp);
+};
+getPositiveTemperatures();
 // Exerice 8: Filter Odd Years
 /*
 Complete the function getOddYears such that it returns all the years that are odd from the years parameter it receives.
@@ -106,7 +113,7 @@ getOddYears([2000, 2015, 2018, 2020]) -> [2015]
 */
 
 // Write your code here
-
+const getOddYears = (years) => years.filter((year) => year % 2 !== 0);
 // Sample usage - Uncomment to test your function
-// console.log(getOddYears([2019, 2020, 2021])); // [2019, 2021]
-// console.log(getOddYears([2000, 2015, 2018, 2020])); // [2015]
+console.log(getOddYears([2019, 2020, 2021])); // [2019, 2021]
+console.log(getOddYears([2000, 2015, 2018, 2020])); // [2015]
