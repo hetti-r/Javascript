@@ -1,5 +1,6 @@
 "use strict";
 const addCarForm = document.querySelector("#addCar");
+const searchCarForm = document.querySelector("#searchForm");
 
 const cars = [];
 
@@ -43,4 +44,33 @@ const displayTable = () => {
   });
 };
 
+const searchCar = (e) => {
+  e.preventDefault();
+  const licenseQuery = document
+    .querySelector("searchResult")
+    .value.trim()
+    .toLowercase();
+
+  const display = document.querySelector("#searchResult");
+  if (!licenseQuery) {
+    display.textContent = "Please submit the license";
+    return;
+  }
+
+  try {
+    const result = cars.find(({ license }) =>
+      license.toLowercase().includes(licenseQuery)
+    );
+    display.textContent = result
+      ? `Found ${result.maker}, owned by ${result.owner}`
+      : "No car with that license plate";
+  } catch (error) {
+    console.error("Error occured:", error);
+    display.textContent = "Something went bobbity boo";
+  }
+
+  display.textContent = licenseQuery;
+};
+
 addCarForm.addEventListener("submit", addCar);
+searchCarForm.addEventListener("submit", searchCar);
