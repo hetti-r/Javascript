@@ -1,0 +1,29 @@
+body {
+background-color: rgb(216, 124, 139);
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  color: antiquewhite;
+  font-style: normal;
+}
+
+
+#foxesContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+#foxesContainer div {
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgb(223, 157, 157);
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
